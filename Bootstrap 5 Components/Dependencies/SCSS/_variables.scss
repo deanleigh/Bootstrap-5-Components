@@ -10,3 +10,8 @@ $body-color: $purple;
 body {
     background-color: #ccc;
 }
+
+.shadow-b {
+    box-shadow: 0 1rem 1rem rgb(0 0 0 / 15%);
+}
+
