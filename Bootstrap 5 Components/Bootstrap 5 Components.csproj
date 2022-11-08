@@ -7,4 +7,8 @@
     <RootNamespace>Bootstrap_5_Components</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>
