@@ -13,6 +13,16 @@ body {
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
 }
 
+.carousel-item {
+  height: calc(100vh - 110px);
+}
+
+.carousel-inner img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;

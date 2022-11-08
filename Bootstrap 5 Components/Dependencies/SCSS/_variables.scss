@@ -15,3 +15,16 @@ body {
     box-shadow: 0 1rem 1rem rgb(0 0 0 / 15%);
 }
 
+.carousel {
+
+}
+
+.carousel-item {
+    height: calc(100vh - 110px);
+}
+
+.carousel-inner img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
