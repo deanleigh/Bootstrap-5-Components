@@ -13,11 +13,17 @@ body {
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-.carousel-item {
-  height: calc(100vh - 110px);
+.carousel {
+  aspect-ratio: 16/9;
 }
-
-.carousel-inner img {
+.carousel .carousel-inner {
+  aspect-ratio: 16/9;
+}
+.carousel .carousel-item {
+  height: calc(100vh - 110px);
+  aspect-ratio: 16/9;
+}
+.carousel .carousel-inner img {
   display: block;
   width: 100%;
   max-width: 100%;

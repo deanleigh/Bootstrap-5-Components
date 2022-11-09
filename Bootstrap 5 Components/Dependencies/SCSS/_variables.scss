@@ -16,15 +16,23 @@ body {
 }
 
 .carousel {
+    aspect-ratio: 16 / 9;
 
+    .carousel-inner {
+        aspect-ratio: 16 / 9;
+    }
+
+
+    .carousel-item {
+        height: calc(100vh - 110px);
+        aspect-ratio: 16 / 9;
+    }
+
+    .carousel-inner img {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
-.carousel-item {
-    height: calc(100vh - 110px);
-}
 
-.carousel-inner img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-}
