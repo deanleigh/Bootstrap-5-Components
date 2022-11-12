@@ -56,19 +56,19 @@ namespace Bootstrap_5_Components
 
             app.UseAuthorization();
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapRazorPages();
-            //    endpoints.MapControllers();
-            //    endpoints.MapBlazorHub<ProductList>("productList");
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapRazorPages();
+                endpoints.MapControllers();
+                //endpoints.MapBlazorHub<ProductList>("productList");
 
-            //    // endpoints.MapGet("/products", (context) => 
-            //    // {
-            //    //     var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
-            //    //     var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
-            //    //     return context.Response.WriteAsync(json);
-            //    // });
-            //});
+                // endpoints.MapGet("/products", (context) => 
+                // {
+                //     var products = app.ApplicationServices.GetService<JsonFileProductService>().GetProducts();
+                //     var json = JsonSerializer.Serialize<IEnumerable<Product>>(products);
+                //     return context.Response.WriteAsync(json);
+                // });
+            });
         }
     }
 }
