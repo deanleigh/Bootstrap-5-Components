@@ -6,6 +6,7 @@ $orange: #fd7e14;
 $purple: #6a15a5;
 
 $body-color: $purple;
+//$body-color: $orange;
 
 body {
     background-color: #ccc;
@@ -21,22 +22,35 @@ img {
 }
 
 .carousel {
-    aspect-ratio: 16 / 9;
+    //outline: 3px red solid;
+    //background-color: #333;
+    height: calc(100vh - 110px);
+
 
     .carousel-inner {
-        aspect-ratio: 16 / 9;
+        height: 100%;
     }
 
 
     .carousel-item {
-        height: calc(100vh - 110px);
-        aspect-ratio: 16 / 9;
+        height: 100%;
     }
 
     .carousel-inner img {
         display: block;
         width: 100%;
+        height: 100%;
         max-width: 100%;
+        object-fit: cover;
+    }
+
+    .carousel-item .img-fluid {
+        width: 100%;
+    }
+
+    .carousel-item a {
+        display: block;
+        width: 100%;
     }
 }
 
