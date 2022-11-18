@@ -3,10 +3,11 @@
 <div class="row row-cols-1 row-cols-md-3 g-4">
         @{
     var count = 0;
+    var maxItems = 4;
 }
         @foreach (var product in Model.Products)
     {
-            if (count == 3)
+            if (count == maxItems)
             {
                 break;
             }
