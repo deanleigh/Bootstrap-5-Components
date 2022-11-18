@@ -1,8 +1,16 @@
 ﻿<section>
     <h2>Stacked Cards in a Grid</h2>
 <div class="row row-cols-1 row-cols-md-3 g-4">
-    @foreach (var product in Model.Products)
+        @{
+    var count = 0;
+}
+        @foreach (var product in Model.Products)
     {
+            if (count == 3)
+            {
+                break;
+            }
+            count++;
      <div class="col">
         <div class="card">
                 <img src="@product.Image" class="card-img-top" alt="...">
@@ -15,3 +23,6 @@
     }
 </div>
 </section>
+
+
+

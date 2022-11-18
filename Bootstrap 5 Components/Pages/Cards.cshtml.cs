@@ -8,7 +8,6 @@ namespace Bootstrap_5_Components.Pages
     public class CardsModel : PageModel
     {
         private readonly ILogger<CardsModel> _logger;
-
         public CardsModel(ILogger<CardsModel> logger,
     JsonFileProductService productService)
         {
