@@ -1,18 +1,24 @@
-@import "../bootstrap/scss/mixins/banner";
-@include bsBanner("");
+// Custom.scss
+// Option B: Include parts of Bootstrap
 
-
-// scss-docs-start import-stack
-// Configuration
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../bootstrap/scss/functions";
-@import "_variables.scss";
+
+// 2. Include any default variable overrides here
+//$body-color: #ff6a00;
+
+// 3. Include remainder of required Bootstrap stylesheets
 @import "../bootstrap/scss/variables";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
 @import "../bootstrap/scss/maps";
 @import "../bootstrap/scss/mixins";
-@import "../bootstrap/scss/utilities";
-
-// Layout & components
 @import "../bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../bootstrap/scss/utilities";
 @import "../bootstrap/scss/reboot";
 @import "../bootstrap/scss/type";
 @import "../bootstrap/scss/images";
@@ -44,9 +50,9 @@
 @import "../bootstrap/scss/offcanvas";
 @import "../bootstrap/scss/placeholders";
 
-// Helpers
-@import "../bootstrap/scss/helpers";
-
-// Utilities
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../bootstrap/scss/utilities/api";
-// scss-docs-end import-stack
+
+// 8. Add additional custom code here
+
+@import "_variables.scss";

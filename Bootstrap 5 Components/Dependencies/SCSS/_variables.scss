@@ -2,14 +2,18 @@
 
 
 
-$orange: #fd7e14;
+//$orange: #fd7e14;
 $purple: #6a15a5;
 
 $body-color: $purple;
-//$body-color: $orange;
+$body-color: $orange;
 
 body {
-    background-color: #ccc;
+    background-color: #cff;
+}
+
+p {
+    @include font-size(2.5rem);
 }
 
 img {
