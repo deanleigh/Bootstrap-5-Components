@@ -10,8 +10,17 @@
             <partial name="Text/_text-01" />
         </div>
         <div class="col-lg-3 offcanvas-lg offcanvas-end" id="offcanvasResponsive" aria-labelledby="offcanvasResponsiveLabel">
-            <h2>Sidebar</h2>
-            <p>Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+            @*Begin Off Canvas Title and Close*@
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">In this site</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasResponsive" aria-label="Close"></button>
+            </div>
+            @*End Off Canvas Title and Close*@
+            @*Begin navigation items*@
+            <div class="offcanvas-body d-flex justify-content-lg-end">
+                <p>Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+            </div>
+            @*End navigation items*@
         </div>
     </div>
 </div>
