@@ -1,15 +1,15 @@
-﻿@* if the current page url matches the url of the navigation item, then add the active class to the navigation item*@
+﻿@* if the current page url matches the url of the navigation item, then add the nav-link active class to the navigation item*@
 
 @{
     var currentUrl = @Context.Request.Path;
 }
 
-<ul class="navbar-nav">
+<ul class="navbar-nav nav-pills">
     @*Home*@
     @if (currentUrl == "/")
     {
         <li class="nav-item">
-            <a class="p-2 rounded-1 nav-link bg-primary text-light active" aria-current="page" asp-area="" asp-page="/Index">Home</a>
+            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Index">Home</a>
         </li>
     }
     else
@@ -22,7 +22,7 @@
     @if (currentUrl == "/Slides")
     {
         <li class="nav-item">
-            <a class="p-2 rounded-1 nav-link bg-primary text-light active" aria-current="page" asp-area="" asp-page="/Slides">Slides</a>
+            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Slides">Slides</a>
         </li>
     }
     else
@@ -35,7 +35,7 @@
     @if (currentUrl == "/Cards")
     {
         <li class="nav-item">
-            <a class="p-2 rounded-1 nav-link bg-primary text-light active" aria-current="page" asp-area="" asp-page="/Cards">Cards</a>
+            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Cards">Cards</a>
         </li>
     }
     else
@@ -48,7 +48,7 @@
     @if (currentUrl == "/Layouts")
     {
         <li class="nav-item">
-            <a class="p-2 rounded-1 nav-link bg-primary text-light active" aria-current="page" asp-area="" asp-page="/Layouts">Layouts</a>
+            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Layouts">Layouts</a>
         </li>
     }
     else
@@ -61,7 +61,7 @@
     @if (currentUrl == "/Grids")
     {
     <li class="nav-item">
-        <a class="p-2 rounded-1 nav-link bg-primary text-light active" aria-current="page" asp-area="" asp-page="/Grids">Grids</a>
+        <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Grids">Grids</a>
     </li>
     }
     else
@@ -74,7 +74,7 @@
     @if (currentUrl == "/Privacy")
     {
         <li class="nav-item">
-            <a class="p-2 rounded-1 nav-link bg-primary text-light active" aria-current="page" asp-area="" asp-page="/Privacy">Privacy</a>
+            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Privacy">Privacy</a>
         </li>
     }
     else
