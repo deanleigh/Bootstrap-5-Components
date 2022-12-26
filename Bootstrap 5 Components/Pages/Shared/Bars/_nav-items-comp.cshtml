@@ -4,23 +4,40 @@
     var currentUrl = @Context.Request.Path;
 }
 
-// cretae a list of navigation items
-@*var  = new List<NavItem>
+@* create a list of navigation items*@
+
+
+@*var navItems = new List<NavItem>
     {
     new NavItem { Url = "/Index", Text = "Home" },
     new NavItem { Url = "/Slides", Text = "Slides" },
     new NavItem { Url = "/Cards", Text = "Cards" }
-    }         
-    
-    // loop through the list of navigation items
-    // for each navigation item, create a list item
-    // display the navigation item text
-    // display the navigation item url
-    // if the current page url matches the url of the navigation item, then add the active class to the navigation item
-    @foreach (var item in navItems)
-    {
-    <li class="nav-item">
-        <a class="nav-link @(currentUrl == item.Url ? "active" : "")" asp-area="" asp-page="@item.Url">@item.Text</a>
-    </li>
     }*@
+
+@{
+    var navItems = new Dictionary<string, string>();
+    navItems.Add("Home", "/Index");
+    navItems.Add("Slides", "/Slides");
+    navItems.Add("Cards", "/Cards");    
+    }
     
+@*@{
+    string[] navItems = new string[] { "Home", "Slides", "Cards", "Bill" };
+}*@
+
+@* create a list of the keys in the dictionary*@
+@*var keys = new List<string>(navItems.Keys);*@
+
+@* create a list of the values in the dictionary*@
+@*var values = new List<string>(navItems.Values);*@
+
+@*loop through the list of navigation items*@
+<ul class="navbar-nav nav-pills">
+@foreach (var item in navItems)
+{
+    <li class="nav-item">
+        @*<a class="nav-link @(currentUrl == item.Url ? "active" : "")" asp-area="" asp-page="item.Url">item.Text</a>*@
+                <a class="nav-link" asp-area="" asp-page="@item.Value">@item.Key</a>
+    </li>
+}
+</ul>
