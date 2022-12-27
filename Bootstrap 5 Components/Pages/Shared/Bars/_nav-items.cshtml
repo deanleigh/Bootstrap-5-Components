@@ -1,92 +1,29 @@
-﻿@* if the current page url matches the url of the navigation item, then add the nav-link active class to the navigation item*@
-
-@{
+﻿@{
+    //Get the current page url
     var currentUrl = @Context.Request.Path;
+
+    // Get the current url if null set to /
+    //currentUrl = currentUrl == null ? "/" : currentUrl;
+    
 }
 
+@{
+    //Create a list of menu items
+    var navItems = new Dictionary<string, string>();
+    navItems.Add("Home", "/Index");
+    navItems.Add("Slides", "/Slides");
+    navItems.Add("Cards", "/Cards");
+    navItems.Add("Layouts", "/Layouts");
+    navItems.Add("Grids", "/Grids");
+    navItems.Add("Privacy", "/Privacy");
+    }
+    
 <ul class="navbar-nav nav-pills">
-    @*Home*@
-    @if (currentUrl == "/")
-    {
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Index">Home</a>
-        </li>
-    }
-    else
-    {
-        <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-page="/Index">Home</a>
-        </li>
-    }
-    @*Slides*@
-    @if (currentUrl == "/Slides")
-    {
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Slides">Slides</a>
-        </li>
-    }
-    else
-    {
-        <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-page="/Slides">Slides</a>
-        </li>
-    }
-    @*Cards*@
-    @if (currentUrl == "/Cards")
-    {
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Cards">Cards</a>
-        </li>
-    }
-    else
-    {
-        <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-page="/Cards">Cards</a>
-        </li>
-    }
-    @*Cards*@
-    @if (currentUrl == "/Layouts")
-    {
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Layouts">Layouts</a>
-        </li>
-    }
-    else
-    {
-        <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-page="/Layouts">Layouts</a>
-        </li>
-    }
-    @*Grids*@
-    @if (currentUrl == "/Grids")
-    {
+    @foreach (var item in navItems)
+    // Loop through the list of navigation items
+{
     <li class="nav-item">
-        <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Grids">Grids</a>
-    </li>
-    }
-    else
-    {
-    <li class="nav-item">
-        <a class="nav-link" asp-area="" asp-page="/Grids">Grids</a>
-    </li>
-    }
-    @*Privacy*@
-    @if (currentUrl == "/Privacy")
-    {
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" asp-area="" asp-page="/Privacy">Privacy</a>
-        </li>
-    }
-    else
-    {
-        <li class="nav-item">
-            <a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a>
-        </li>
-    }
-@*    <li class="nav-item">
-        @Context.Request.Path 
-    </li>*@
+            <a class="nav-link @(currentUrl == item.Value ? "active" : "")" asp-area="" asp-page="@item.Value">@item.Key</a>
+    </li>   
+}
 </ul>
-
-
-
