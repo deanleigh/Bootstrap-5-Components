@@ -2,9 +2,15 @@
     //Get the current page url
     var currentUrl = @Context.Request.Path;
 
-    // Get the current url if null set to /
-    //currentUrl = currentUrl == null ? "/" : currentUrl;
-    
+    // If the current url is / then set the current url to /Index
+    if (currentUrl == null)
+    {
+        currentUrl = "/";
+    }
+    else if (currentUrl == "/")
+    {
+        currentUrl = "/Index";
+    }
 }
 
 @{
