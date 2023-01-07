@@ -1,7 +1,29 @@
-﻿<div class="container mt-3">
+﻿@using Microsoft.AspNetCore.Mvc.RazorPages
+@using Microsoft.AspNetCore.Routing
+@inject EndpointDataSource EndpointsDataSource
+
+<div class="container mt-3">
     <div class="row">
         <div class="col-3">
-            Left Column
+            @{
+                HashSet<string> Pages = new HashSet<string>();
+                foreach (var endpoint in EndpointsDataSource.Endpoints)
+                {
+                    foreach (var metadata in endpoint.Metadata)
+                    {
+                        if (metadata is PageActionDescriptor)
+                        {
+                            Pages.Add(((PageActionDescriptor)metadata).RelativePath);
+                        }
+                    }
+                }
+            }
+            <ul>
+                @foreach (var p in Pages)
+                {
+                    <li>@p</li>
+                }
+            </ul>
         </div>
         <div class="col-6">
             <partial name="Text/_text-01" />
