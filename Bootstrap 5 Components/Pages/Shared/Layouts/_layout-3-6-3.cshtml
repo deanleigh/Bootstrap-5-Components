@@ -21,12 +21,12 @@
                     }
                 }
             }
-            <ul>
+            <ul class="nav flex-column">
                 @foreach (var p in Pages)
                 {
-                    <li>
-                        <a href="@p">@p</a>
-                        </li>
+                    <li class="nav-item">
+                        <a href="@p" class="nav-link">@p</a>
+                    </li>
                 }
             </ul>
         </div>
