@@ -13,7 +13,10 @@
                     {
                         if (metadata is PageActionDescriptor)
                         {
-                            Pages.Add(((PageActionDescriptor)metadata).RelativePath);
+                            //Pages.Add(((PageActionDescriptor)metadata).RelativePath);
+                            Pages.Add(((PageActionDescriptor)metadata).RouteValues["page"].ToString());
+                            //Pages.Add(((PageActionDescriptor)metadata).RouteValues["handler"].ToString());
+                            //Pages.Add(((PageActionDescriptor)metadata).RouteValues["area"].ToString());
                         }
                     }
                 }
@@ -21,7 +24,9 @@
             <ul>
                 @foreach (var p in Pages)
                 {
-                    <li>@p</li>
+                    <li>
+                        <a href="@p">@p</a>
+                        </li>
                 }
             </ul>
         </div>
