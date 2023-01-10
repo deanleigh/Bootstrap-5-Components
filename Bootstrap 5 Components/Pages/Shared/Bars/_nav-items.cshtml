@@ -24,11 +24,11 @@
     navItems.Add("Privacy", "/Privacy");
     }
     
-<ul class="navbar-nav nav-pills">
+<ul class="navbar-nav nav-pills flex-grow-1 flex-lg-grow-0">
     @foreach (var item in navItems)
     // Loop through the list of navigation items
 {
-    <li class="nav-item">
+        <li class="nav-item text-center">
             <a class="nav-link @(currentUrl == item.Value ? "active" : "")" asp-area="" asp-page="@item.Value">@item.Key</a>
     </li>   
 }
