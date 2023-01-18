@@ -3,5 +3,9 @@
 @{
     ViewData["Title"] = "Slides";
     ViewData["Description"] = "A fully responsive carousel set to work at full screen on all devices, designed to work without this header";
-    Layout = "~/Pages/Shared/_LayoutHero.cshtml";
+    //Layout = "~/Pages/Shared/_LayoutHero.cshtml";
+}
+
+@section hero {
+    <partial name="Slides/_slides-full" />
 }

@@ -12,6 +12,9 @@
     <header class="screen--header sticky-top shadow-b">
         <partial name="Bars/_bar_nav_top_offcanvas" />
     </header>
+    <div id="hero">
+        @RenderSection("hero", required: false)
+    </div>
     <main role="main" class="pb-3">
         <partial name="Text/_title-description" />
             @RenderBody()
