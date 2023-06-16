@@ -3,8 +3,8 @@
 @inject EndpointDataSource EndpointsDataSource
 
 <div class="container mt-3">
-    <div class="row">
-        <div class="col-md-3">
+    <div class="grid">
+        <div class="g-col-12 g-col-md-3">
             @{
                 HashSet<string> Pages = new HashSet<string>();
                 foreach (var endpoint in EndpointsDataSource.Endpoints)
@@ -37,10 +37,10 @@
                 </div>
             </nav>
         </div>
-        <div class="col-md-6">
+        <div class="g-col-12 g-col-md-6">
             <partial name="Text/_text-01" />
         </div>
-        <div class="col-md-3">
+        <div class="g-col-12 g-col-md-3">
             Right Column
         </div>
     </div>
