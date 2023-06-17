@@ -3,11 +3,11 @@
     @foreach (var product in Model.Products)
     {
     <div class="card mb-3">
-        <div class="row g-0">
-            <div class="col-md-4">
+        <div class="d-flex">
+                <div class="w-25">
                 <img src="@product.Image" class="img-fluid rounded-start" alt="...">
             </div>
-            <div class="col-md-8 d-flex flex-column">
+                <div class="w-75 d-flex flex-column">
                 <div class="card-header d-flex flex-row justify-content-between">
                     <h5 class="card-title">@product.Title</h5>
                     <div><span class="badge rounded-pill text-bg-primary">£56,654</span></div>
